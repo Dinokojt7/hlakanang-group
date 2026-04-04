@@ -15,49 +15,19 @@ const links = [
   { label: "Contact", href: "#contact" },
 ];
 
-/**
- * Logo with split coloring:
- * - Left portion (icon): original red/blue colors
- * - Right portion (text): colored via filter prop ("black" or "white")
- */
-function SplitLogo({ textFilter = "black", priority = false }) {
-  return (
-    <div className="relative h-11 w-36">
-      {/* Icon portion — original red/blue (clip right 58%) */}
-      <div
-        className="absolute inset-0 overflow-hidden"
-        style={{ clipPath: "inset(0 58% 0 0)" }}
-      >
-        <Image
-          src="/logo.png"
-          fill
-          sizes="144px"
-          alt=""
-          className="object-contain object-left"
-          priority={priority}
-        />
-      </div>
-      {/* Text portion — recolored (clip left 34%) */}
-      <div
-        className="absolute inset-0 overflow-hidden"
-        style={{ clipPath: "inset(0 0 0 34%)" }}
-      >
-        <Image
-          src="/logo.png"
-          fill
-          sizes="144px"
-          alt="Hlakanang Group"
-          className={`object-contain object-left ${
-            textFilter === "white"
-              ? "brightness-0 invert"
-              : "brightness-0"
-          }`}
-          priority={priority}
-        />
-      </div>
-    </div>
-  );
-}
+const IconInstagram = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+  </svg>
+);
+
+const IconFacebook = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  </svg>
+);
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -71,27 +41,47 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Announcement bar — phone + email only */}
-      <div className="bg-navy text-white text-xs sm:text-sm py-2.5 section-pad flex items-center justify-between gap-4">
-        <div className="flex items-center gap-5">
+      {/* Announcement bar — social icons left, contact details right */}
+      <div className="bg-navy text-white text-xs py-2.5 section-pad flex items-center justify-between gap-4">
+        {/* Left — social icons */}
+        <div className="flex items-center gap-3">
+          <a
+            href={data.business.social.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="hover:text-white/70 transition-colors"
+          >
+            <IconInstagram />
+          </a>
+          <a
+            href={data.business.social.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="hover:text-white/70 transition-colors"
+          >
+            <IconFacebook />
+          </a>
+        </div>
+
+        {/* Right — phone + email */}
+        <div className="flex items-center gap-4 sm:gap-6">
           <a
             href={`tel:${data.business.phone}`}
             className="flex items-center gap-1.5 hover:text-white/80 transition-colors font-medium"
           >
-            <Phone size={13} />
+            <Phone size={12} />
             {data.business.phone}
           </a>
           <a
             href={`mailto:${data.business.email}`}
             className="hidden sm:flex items-center gap-1.5 hover:text-white/80 transition-colors"
           >
-            <Mail size={13} />
+            <Mail size={12} />
             {data.business.email}
           </a>
         </div>
-        <span className="text-white/50 text-xs hidden sm:block">
-          Unity in Diversity
-        </span>
       </div>
 
       {/* Main nav */}
@@ -101,9 +91,16 @@ export default function Navbar() {
         }`}
       >
         <div className="section-pad mx-auto max-w-7xl flex items-center justify-between h-[70px]">
-          {/* Logo — icon original colors, text black */}
+          {/* Logo — transparent bg version with black text */}
           <a href="/" className="shrink-0" aria-label="Hlakanang Group home">
-            <SplitLogo textFilter="black" priority />
+            <Image
+              src="/logo-light.png"
+              alt="Hlakanang Group"
+              width={160}
+              height={56}
+              className="h-11 w-auto object-contain"
+              priority
+            />
           </a>
 
           {/* Desktop links */}
