@@ -39,7 +39,7 @@ export const metadata = {
       "Professional gate motors, garage doors, CCTV, electric fencing & intercom installations across Gauteng. Free on-site quotes.",
     images: [
       {
-        url: "/images/hero-electric-fence-house.jpg",
+        url: "/images/hero-electric-fence-house.webp",
         width: 1200,
         height: 630,
         alt: "Hlakanang Group — Security & Automation",
