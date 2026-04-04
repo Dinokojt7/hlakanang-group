@@ -1,0 +1,123 @@
+{
+  "business": {
+    "name": "Hlakanang Group",
+    "tagline": "Unity in Diversity",
+    "shortName": "Hlakanang Group",
+    "description": "Hlakanang Group is a trusted provider of gate automation, garage doors, CCTV security systems, electric fencing, and intercom solutions. We supply, install, and maintain all major brands with professional workmanship across Gauteng.",
+    "phone": "+27 61 429 0734",
+    "email": "info@hlakananggroup.co.za",
+    "address": "4 Doordek Avenue, Horizon View, Roodepoort",
+    "whatsapp": "https://wa.me/27614290734",
+    "social": {
+      "instagram": "https://www.instagram.com/hlakananggroup",
+      "facebook": "https://www.facebook.com/p/Hlakanang-Group-100053053495359/",
+      "twitter": "#",
+      "linkedin": "#"
+    }
+  },
+  "colors": {
+    "primary": "#CC0000",
+    "accent": "#1A1A8C"
+  },
+  "services": [
+    {
+      "title": "Gate & Garage Automation",
+      "description": "Supply, installation and repairs of all brands and types of gate motors and garage openers — including ET 500, G10 Turbo, DC Blue Advanced, and Centurion. Battery back-up included for load shedding."
+    },
+    {
+      "title": "Garage Doors",
+      "description": "Installation, repairs and maintenance of roll-up, sectional, aluminium, steel, aluzinc, and wooden garage doors. We handle all makes at affordable prices."
+    },
+    {
+      "title": "CCTV Cameras & Alarm Systems",
+      "description": "Supply and installation of box/bullet, dome, PTZ, IP, day/night, and wide dynamic security cameras. Monitored and standalone alarm systems for full perimeter protection."
+    },
+    {
+      "title": "Electric Fencing",
+      "description": "Professional installation and repair of electric perimeter fencing for residential and commercial properties. Reliable protection backed by quality workmanship."
+    },
+    {
+      "title": "Intercoms",
+      "description": "Supply and installation of intercom entry systems for homes and businesses. Control access and communicate with visitors from the comfort of your property."
+    },
+    {
+      "title": "Smart WiFi Control",
+      "description": "Gate & Garage Smart WiFi Switch — control your gate or garage motor from your phone anywhere in the world. Easy setup, compatible with all major motor brands."
+    }
+  ],
+  "stats": [
+    { "num": "6+", "label": "Core Services" },
+    { "num": "All Brands", "label": "Gate Motors Serviced" },
+    { "num": "Gauteng", "label": "Service Area" }
+  ],
+  "testimonials": [
+    {
+      "companyType": "Residential",
+      "company": "Homeowner, Roodepoort",
+      "headline": "GATE MOTOR SORTED",
+      "subheadline": "Fast installation, professional finish",
+      "quote": "Hlakanang Group came out the same day, fitted our sliding gate motor, and left everything neat. Excellent service from start to finish.",
+      "author": "Happy Homeowner",
+      "role": "Residential Client, Roodepoort"
+    },
+    {
+      "companyType": "Commercial",
+      "company": "Business Owner, Gauteng",
+      "headline": "SECURITY UPGRADED",
+      "subheadline": "CCTV & alarm system fully installed",
+      "quote": "Our warehouse now has full CCTV coverage and a monitored alarm. The team was professional, quick, and the pricing was very fair.",
+      "author": "Business Owner",
+      "role": "Commercial Client, Gauteng"
+    },
+    {
+      "companyType": "Residential",
+      "company": "Homeowner, Horizon View",
+      "headline": "GARAGE DOOR REPLACED",
+      "subheadline": "New wooden door, perfect fit",
+      "quote": "I was impressed by the quality of the wooden garage door and how clean the installation was. Great value and a team you can trust.",
+      "author": "Satisfied Client",
+      "role": "Residential Client, Horizon View"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "WHAT SERVICES DOES HLAKANANG GROUP OFFER?",
+      "answer": "We offer gate and garage automation, garage door installations and repairs, CCTV cameras and alarm systems, electric fencing, intercom entry systems, and smart WiFi motor control switches."
+    },
+    {
+      "question": "WHICH GATE MOTOR BRANDS DO YOU SUPPLY AND SERVICE?",
+      "answer": "We work with all major brands including ET 500, G10 Turbo, DC Blue Advanced, Centurion, and more. If you have an existing motor of any brand, we can service and repair it."
+    },
+    {
+      "question": "DO YOU OFFER CCTV AND ALARM SYSTEMS?",
+      "answer": "Yes. We supply and install a full range of security cameras — box/bullet, dome, PTZ, and IP cameras — as well as monitored and standalone alarm systems tailored to your property."
+    },
+    {
+      "question": "WHAT TYPES OF GARAGE DOORS DO YOU INSTALL?",
+      "answer": "We install roll-up, sectional, aluminium, steel, aluzinc, and wooden garage doors for both single and double garages. We handle installations, repairs, and full replacements."
+    },
+    {
+      "question": "DO YOUR MOTORS HAVE BATTERY BACK-UP FOR LOAD SHEDDING?",
+      "answer": "Yes. Our gate and garage motors include battery back-up, so your automation keeps working even during load shedding."
+    },
+    {
+      "question": "HOW DO I GET A FREE QUOTATION?",
+      "answer": "Simply call or WhatsApp us on +27 61 429 0734, or email info@hlakananggroup.co.za. We offer free, no-obligation quotations and can arrange a site visit at your convenience."
+    }
+  ],
+  "footer": {
+    "quickLinks": [
+      { "label": "Home", "href": "/" },
+      { "label": "About Us", "href": "/#about" },
+      { "label": "Services", "href": "/#services" },
+      { "label": "Testimonials", "href": "/#testimonials" },
+      { "label": "FAQ", "href": "/#faq" },
+      { "label": "Contact", "href": "/#contact" }
+    ],
+    "legal": [
+      { "label": "Privacy Policy", "href": "/privacy-policy" },
+      { "label": "Terms of Service", "href": "/terms" },
+      { "label": "PAIA Manual", "href": "/paia" }
+    ]
+  }
+}
