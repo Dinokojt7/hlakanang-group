@@ -15,6 +15,50 @@ const links = [
   { label: "Contact", href: "#contact" },
 ];
 
+/**
+ * Logo with split coloring:
+ * - Left portion (icon): original red/blue colors
+ * - Right portion (text): colored via filter prop ("black" or "white")
+ */
+function SplitLogo({ textFilter = "black", priority = false }) {
+  return (
+    <div className="relative h-11 w-36">
+      {/* Icon portion — original red/blue (clip right 58%) */}
+      <div
+        className="absolute inset-0 overflow-hidden"
+        style={{ clipPath: "inset(0 58% 0 0)" }}
+      >
+        <Image
+          src="/logo.png"
+          fill
+          sizes="144px"
+          alt=""
+          className="object-contain object-left"
+          priority={priority}
+        />
+      </div>
+      {/* Text portion — recolored (clip left 34%) */}
+      <div
+        className="absolute inset-0 overflow-hidden"
+        style={{ clipPath: "inset(0 0 0 34%)" }}
+      >
+        <Image
+          src="/logo.png"
+          fill
+          sizes="144px"
+          alt="Hlakanang Group"
+          className={`object-contain object-left ${
+            textFilter === "white"
+              ? "brightness-0 invert"
+              : "brightness-0"
+          }`}
+          priority={priority}
+        />
+      </div>
+    </div>
+  );
+}
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -27,27 +71,27 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Announcement bar */}
-      <div className="bg-navy text-white text-xs sm:text-sm py-2.5 px-5 sm:px-8 lg:px-12 xl:px-16 flex items-center justify-between gap-4">
+      {/* Announcement bar — phone + email only */}
+      <div className="bg-navy text-white text-xs sm:text-sm py-2.5 section-pad flex items-center justify-between gap-4">
         <div className="flex items-center gap-5">
-          <a href={`tel:${data.business.phone}`} className="flex items-center gap-1.5 hover:text-white/80 transition-colors font-medium">
+          <a
+            href={`tel:${data.business.phone}`}
+            className="flex items-center gap-1.5 hover:text-white/80 transition-colors font-medium"
+          >
             <Phone size={13} />
             {data.business.phone}
           </a>
-          <a href={`mailto:${data.business.email}`} className="hidden sm:flex items-center gap-1.5 hover:text-white/80 transition-colors">
+          <a
+            href={`mailto:${data.business.email}`}
+            className="hidden sm:flex items-center gap-1.5 hover:text-white/80 transition-colors"
+          >
             <Mail size={13} />
             {data.business.email}
           </a>
         </div>
-        <a
-          href={data.business.whatsapp}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 bg-[#25D366] hover:bg-[#1db954] transition-colors px-4 py-1.5 rounded-full text-xs font-semibold shadow-sm"
-        >
-          <Image src="/images/whatsapp-icon.png" alt="WhatsApp" width={13} height={13} className="object-contain" />
-          WhatsApp Us
-        </a>
+        <span className="text-white/50 text-xs hidden sm:block">
+          Unity in Diversity
+        </span>
       </div>
 
       {/* Main nav */}
@@ -57,9 +101,9 @@ export default function Navbar() {
         }`}
       >
         <div className="section-pad mx-auto max-w-7xl flex items-center justify-between h-[70px]">
-          {/* Logo */}
-          <a href="/" className="shrink-0">
-            <Image src="/logo.png" alt="Hlakanang Group" width={150} height={56} className="h-12 w-auto object-contain shrink-0" priority />
+          {/* Logo — icon original colors, text black */}
+          <a href="/" className="shrink-0" aria-label="Hlakanang Group home">
+            <SplitLogo textFilter="black" priority />
           </a>
 
           {/* Desktop links */}
@@ -76,12 +120,21 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Desktop CTA */}
+          {/* Desktop CTA — WhatsApp green pill */}
           <a
-            href="#contact"
-            className="hidden lg:inline-flex items-center gap-2 bg-red hover:bg-red-dark text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors"
+            href={data.business.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden lg:inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1db954] text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors shadow-[0_4px_14px_rgba(0,0,0,0.15)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.2)]"
           >
-            Get Free Quote
+            <Image
+              src="/images/whatsapp-icon.png"
+              alt=""
+              width={16}
+              height={16}
+              className="object-contain shrink-0"
+            />
+            WhatsApp Us
           </a>
 
           {/* Mobile toggle */}
@@ -116,11 +169,20 @@ export default function Navbar() {
                   </a>
                 ))}
                 <a
-                  href="#contact"
+                  href={data.business.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setOpen(false)}
-                  className="mt-2 inline-flex justify-center items-center bg-red hover:bg-red-dark text-white text-sm font-semibold px-5 py-3 rounded-full transition-colors"
+                  className="mt-2 inline-flex justify-center items-center gap-2 bg-[#25D366] hover:bg-[#1db954] text-white text-sm font-semibold px-5 py-3 rounded-full transition-colors shadow-[0_4px_14px_rgba(0,0,0,0.15)]"
                 >
-                  Get Free Quote
+                  <Image
+                    src="/images/whatsapp-icon.png"
+                    alt=""
+                    width={16}
+                    height={16}
+                    className="object-contain shrink-0"
+                  />
+                  WhatsApp Us
                 </a>
               </nav>
             </motion.div>
