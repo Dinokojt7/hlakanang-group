@@ -10,7 +10,7 @@ export default function CTA() {
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/hero-electric-fence-house.jpg')" }}
+        style={{ backgroundImage: "url('/images/hero-electric-fence-house.webp')" }}
       />
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-charcoal/82" />

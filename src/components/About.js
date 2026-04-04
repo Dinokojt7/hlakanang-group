@@ -35,7 +35,7 @@ export default function About() {
             {/* Main image */}
             <div className="relative rounded-2xl overflow-hidden aspect-4/3 shadow-lg">
               <Image
-                src="/images/hero-double-garage-dark.jpg"
+                src="/images/hero-double-garage-dark.webp"
                 alt="Hlakanang Group installation"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -50,7 +50,7 @@ export default function About() {
             {/* Floating secondary image — desktop only */}
             <div className="absolute -bottom-8 -right-6 w-2/5 aspect-square rounded-xl overflow-hidden border-4 border-surface shadow-xl hidden sm:block">
               <Image
-                src="/images/gallery-installation-work.jpg"
+                src="/images/gallery-installation-work.webp"
                 alt="Installation work"
                 fill
                 sizes="20vw"
