@@ -96,16 +96,16 @@ export default function Hero() {
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col xs:flex-row flex-wrap gap-3 sm:gap-4">
+            <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 bg-red hover:bg-red-dark text-white font-semibold px-8 py-4 rounded-full transition-colors text-sm"
+                className="inline-flex items-center justify-center gap-2 bg-red hover:bg-red-dark text-white font-semibold px-6 py-3 rounded-full transition-colors text-sm"
               >
                 Get a Free Quote
               </a>
               <a
                 href={`tel:${data.business.phone}`}
-                className="inline-flex items-center gap-2 border border-white/35 hover:border-white hover:bg-white/10 text-white font-semibold px-8 py-4 rounded-full transition-all text-sm"
+                className="inline-flex items-center justify-center gap-2 border border-white/35 hover:border-white hover:bg-white/10 text-white font-semibold px-6 py-3 rounded-full transition-all text-sm"
               >
                 <Phone size={16} />
                 {data.business.phone}
