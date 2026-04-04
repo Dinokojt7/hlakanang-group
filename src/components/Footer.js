@@ -26,7 +26,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer id="contact" className="bg-charcoal text-white">
+    <footer id="contact" className="bg-footer text-white">
       {/* Red top accent */}
       <div className="h-1.5 bg-red" />
 
@@ -35,17 +35,14 @@ export default function Footer() {
 
           {/* Brand column */}
           <div className="lg:col-span-1">
-            {/* Logo — icon in original red/blue, text white */}
-            <div className="relative h-11 w-36 mb-5">
-              {/* Icon portion — original colors */}
-              <div className="absolute inset-0 overflow-hidden" style={{ clipPath: "inset(0 58% 0 0)" }}>
-                <Image src="/logo.png" fill sizes="144px" alt="" className="object-contain object-left" />
-              </div>
-              {/* Text portion — white */}
-              <div className="absolute inset-0 overflow-hidden" style={{ clipPath: "inset(0 0 0 34%)" }}>
-                <Image src="/logo.png" fill sizes="144px" alt="Hlakanang Group" className="object-contain object-left brightness-0 invert" />
-              </div>
-            </div>
+            {/* Dark-bg logo — bg matches footer exactly so it blends in */}
+            <Image
+              src="/logo-dark.png"
+              alt="Hlakanang Group"
+              width={160}
+              height={60}
+              className="h-14 w-auto object-contain mb-5"
+            />
             <p className="text-white/50 text-sm leading-relaxed mb-6">
               {business.description}
             </p>
