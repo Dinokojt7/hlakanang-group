@@ -90,15 +90,15 @@ export default function Navbar() {
           scrolled ? "bg-white shadow-md border-gray-200" : "bg-white border-gray-100"
         }`}
       >
-        <div className="section-pad mx-auto max-w-7xl flex items-center justify-between h-[70px]">
+        <div className="section-pad mx-auto max-w-7xl flex items-center justify-between h-20">
           {/* Logo — transparent bg version with black text */}
           <a href="/" className="shrink-0" aria-label="Hlakanang Group home">
             <Image
               src="/logo-light.png"
               alt="Hlakanang Group"
-              width={160}
-              height={56}
-              className="h-11 w-auto object-contain"
+              width={240}
+              height={80}
+              className="h-16 w-auto object-contain"
               priority
             />
           </a>

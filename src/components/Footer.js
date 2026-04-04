@@ -39,9 +39,9 @@ export default function Footer() {
             <Image
               src="/logo-dark.png"
               alt="Hlakanang Group"
-              width={160}
-              height={60}
-              className="h-14 w-auto object-contain mb-5"
+              width={280}
+              height={100}
+              className="h-28 w-auto object-contain mb-5"
             />
             <p className="text-white/50 text-sm leading-relaxed mb-6">
               {business.description}
@@ -130,15 +130,6 @@ export default function Footer() {
               </li>
             </ul>
 
-            <a
-              href={business.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#1db954] text-white font-semibold px-5 py-2.5 rounded-full transition-colors text-sm shadow-[0_4px_14px_rgba(0,0,0,0.18)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.22)]"
-            >
-              <Image src="/images/whatsapp-icon.png" alt="WhatsApp" width={16} height={16} className="object-contain shrink-0" />
-              WhatsApp Us
-            </a>
           </div>
         </div>
       </div>
@@ -147,12 +138,16 @@ export default function Footer() {
       <div className="border-t border-white/8">
         <div className="section-pad mx-auto max-w-7xl py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/30">
           <p>© {year} {business.name}. All rights reserved.</p>
-          <div className="flex gap-5">
-            {footer.legal.map((l) => (
-              <a key={l.label} href={l.href} className="hover:text-white/60 transition-colors">
-                {l.label}
-              </a>
-            ))}
+          <div className="flex items-center gap-2">
+            <span>Powered by</span>
+            <div className="relative h-5 w-20">
+              <Image
+                src="/images/addin-flux.png"
+                alt="Addin Flux"
+                fill
+                className="object-contain object-left brightness-0 invert opacity-50"
+              />
+            </div>
           </div>
         </div>
       </div>
