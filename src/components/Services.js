@@ -7,32 +7,32 @@ const services = [
   {
     title: "Gate & Garage Automation",
     description: "All brands — ET, Centurion, DC Blue. Battery back-up included.",
-    image: "/images/product-centurion-gate-motor.jpg",
+    image: "/images/product-centurion-gate-motor.webp",
   },
   {
     title: "Garage Doors",
     description: "Roll-up, sectional, aluminium, steel, aluzinc & wooden doors.",
-    image: "/images/hero-wooden-garage-double.jpg",
+    image: "/images/hero-wooden-garage-double.webp",
   },
   {
     title: "CCTV & Alarm Systems",
     description: "Box, dome, PTZ & IP cameras. Monitored & standalone alarms.",
-    image: "/images/gallery-installation-work.jpg",
+    image: "/images/gallery-installation-work.webp",
   },
   {
     title: "Electric Fencing",
     description: "Residential & commercial perimeter fencing, installed right.",
-    image: "/images/hero-electric-fence-house.jpg",
+    image: "/images/hero-electric-fence-house.webp",
   },
   {
     title: "Intercoms",
     description: "Entry intercom systems for homes and businesses.",
-    image: "/images/gallery-wooden-garage-single.jpg",
+    image: "/images/gallery-wooden-garage-single.webp",
   },
   {
     title: "Smart WiFi Control",
     description: "Control your gate or garage from your phone, anywhere.",
-    image: "/images/hero-double-garage-dark.jpg",
+    image: "/images/hero-double-garage-dark.webp",
   },
 ];
 

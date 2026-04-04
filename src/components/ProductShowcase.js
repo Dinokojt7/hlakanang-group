@@ -8,7 +8,7 @@ import { ArrowRight, Check } from "lucide-react";
 const tabs = [
   {
     label: "Gate Motors",
-    image: "/images/product-centurion-gate-motor.jpg",
+    image: "/images/product-centurion-gate-motor.webp",
     eyebrow: "All Brands & Types",
     heading: "Sliding & Swing Gate Automation",
     description:
@@ -25,7 +25,7 @@ const tabs = [
   },
   {
     label: "Garage Doors",
-    image: "/images/hero-wooden-garage-double.jpg",
+    image: "/images/hero-wooden-garage-double.webp",
     eyebrow: "All Makes & Materials",
     heading: "Garage Doors at Affordable Prices",
     description:
@@ -42,7 +42,7 @@ const tabs = [
   },
   {
     label: "CCTV & Alarms",
-    image: "/images/gallery-installation-work.jpg",
+    image: "/images/gallery-installation-work.webp",
     eyebrow: "Full Security Packages",
     heading: "CCTV Cameras & Alarm Systems",
     description:
@@ -106,7 +106,7 @@ export default function ProductShowcase() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.35 }}
-            className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 lg:gap-14 items-center"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center"
           >
             {/* Image — square ratio: taller than 16:9, narrower column shows more vertical scene */}
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md">
@@ -114,7 +114,7 @@ export default function ProductShowcase() {
                 src={tabs[active].image}
                 alt={tabs[active].heading}
                 fill
-                sizes="(max-width: 1024px) 100vw, 40vw"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center"
               />
               <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-red" />
