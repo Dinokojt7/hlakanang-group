@@ -41,6 +41,26 @@ const card = {
   show: { opacity: 1, y: 0 },
 };
 
+/* Long-tail arrow — wider than lucide ArrowRight */
+const LongArrow = ({ className }) => (
+  <svg
+    width="28"
+    height="10"
+    viewBox="0 0 28 10"
+    fill="none"
+    className={className}
+    aria-hidden="true"
+  >
+    <path
+      d="M0 5H25M21 1L26 5L21 9"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 export default function Services() {
   return (
     <section id="services" className="py-20 lg:py-28 bg-white">
@@ -68,7 +88,7 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Grid — 2 cols on mobile, 3 cols on desktop */}
+        {/* Grid */}
         <motion.div
           variants={{ show: { transition: { staggerChildren: 0.08 } } }}
           initial="hidden"
@@ -81,19 +101,16 @@ export default function Services() {
               key={s.title}
               variants={card}
               transition={{ duration: 0.5 }}
-              className="group relative overflow-hidden rounded-xl aspect-4/3 cursor-pointer"
+              className="group relative overflow-hidden rounded-xl aspect-video cursor-pointer"
             >
-              {/* Background image */}
+              {/* Background image — 16:9 shows full landscape scene */}
               <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: `url(${s.image})` }}
               />
 
-              {/* Base dark overlay */}
-              <div className="absolute inset-0 bg-linear-to-t from-charcoal/95 via-charcoal/50 to-charcoal/10" />
-
-              {/* Red hover overlay */}
-              <div className="absolute inset-0 bg-linear-to-t from-red/90 via-red/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
+              {/* Permanent red gradient overlay */}
+              <div className="absolute inset-0 bg-linear-to-t from-red/85 via-red/30 to-charcoal/25" />
 
               {/* Red left bar */}
               <div className="absolute left-0 top-0 bottom-0 w-1 bg-red" />
@@ -103,15 +120,15 @@ export default function Services() {
                 <h3 className="text-white font-bold text-sm sm:text-base leading-snug mb-1">
                   {s.title}
                 </h3>
-                <p className="text-white/65 text-xs leading-relaxed mb-3 line-clamp-2">
+                <p className="text-white/70 text-xs leading-relaxed mb-3 line-clamp-2">
                   {s.description}
                 </p>
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-white/80 group-hover:text-white transition-colors"
+                  className="inline-flex items-center gap-2 text-xs font-semibold text-white/80 group-hover:text-white transition-colors"
                 >
                   Get a Quote
-                  <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
+                  <LongArrow className="group-hover:translate-x-1.5 transition-transform duration-300" />
                 </a>
               </div>
             </motion.div>

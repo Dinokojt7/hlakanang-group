@@ -108,8 +108,8 @@ export default function ProductShowcase() {
             transition={{ duration: 0.35 }}
             className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center"
           >
-            {/* Image */}
-            <div className="relative aspect-4/3 rounded-2xl overflow-hidden shadow-md">
+            {/* Image — 16:9 ratio shows full landscape scene without heavy crop */}
+            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-md">
               <Image
                 src={tabs[active].image}
                 alt={tabs[active].heading}
@@ -118,7 +118,7 @@ export default function ProductShowcase() {
                 className="object-cover object-center"
               />
               <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-red" />
-              <div className="absolute inset-0 bg-linear-to-t from-charcoal/40 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-charcoal/30 to-transparent" />
             </div>
 
             {/* Text */}
