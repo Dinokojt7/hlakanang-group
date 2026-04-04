@@ -35,13 +35,17 @@ export default function Footer() {
 
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <Image
-              src="/logo.png"
-              alt="Hlakanang Group"
-              width={150}
-              height={56}
-              className="h-12 w-auto object-contain mb-5 brightness-0 invert"
-            />
+            {/* Logo — icon in original red/blue, text white */}
+            <div className="relative h-11 w-36 mb-5">
+              {/* Icon portion — original colors */}
+              <div className="absolute inset-0 overflow-hidden" style={{ clipPath: "inset(0 58% 0 0)" }}>
+                <Image src="/logo.png" fill sizes="144px" alt="" className="object-contain object-left" />
+              </div>
+              {/* Text portion — white */}
+              <div className="absolute inset-0 overflow-hidden" style={{ clipPath: "inset(0 0 0 34%)" }}>
+                <Image src="/logo.png" fill sizes="144px" alt="Hlakanang Group" className="object-contain object-left brightness-0 invert" />
+              </div>
+            </div>
             <p className="text-white/50 text-sm leading-relaxed mb-6">
               {business.description}
             </p>
