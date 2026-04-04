@@ -109,8 +109,11 @@ export default function Services() {
                 style={{ backgroundImage: `url(${s.image})` }}
               />
 
-              {/* Permanent red gradient overlay */}
-              <div className="absolute inset-0 bg-linear-to-t from-red/85 via-red/30 to-charcoal/25" />
+              {/* Base dark overlay — always on for text readability */}
+              <div className="absolute inset-0 bg-linear-to-t from-charcoal/90 via-charcoal/40 to-charcoal/10" />
+
+              {/* Red overlay — hover only */}
+              <div className="absolute inset-0 bg-linear-to-t from-red/85 via-red/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               {/* Red left bar */}
               <div className="absolute left-0 top-0 bottom-0 w-1 bg-red" />
