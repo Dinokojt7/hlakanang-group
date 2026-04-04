@@ -106,15 +106,15 @@ export default function ProductShowcase() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.35 }}
-            className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-10 lg:gap-14 items-center"
+            className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 lg:gap-14 items-center"
           >
-            {/* Image — 16:9 ratio shows full landscape scene without heavy crop */}
-            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-md">
+            {/* Image — square ratio: taller than 16:9, narrower column shows more vertical scene */}
+            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md">
               <Image
                 src={tabs[active].image}
                 alt={tabs[active].heading}
                 fill
-                sizes="(max-width: 1024px) 100vw, 60vw"
+                sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover object-center"
               />
               <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-red" />
