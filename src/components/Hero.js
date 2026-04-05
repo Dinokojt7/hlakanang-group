@@ -63,9 +63,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-linear-to-r from-charcoal/90 via-charcoal/65 to-charcoal/20" />
       <div className="absolute inset-0 bg-linear-to-t from-charcoal/60 via-transparent to-charcoal/20" />
 
-      {/* Red left accent bar */}
-      <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-red" />
-
+     
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col justify-center section-pad mx-auto max-w-7xl">
         <AnimatePresence mode="wait">
@@ -103,19 +101,13 @@ export default function Hero() {
               >
                 Get a Free Quote
               </a>
-              <a
-                href={`tel:${data.business.phone}`}
-                className="inline-flex items-center justify-center gap-2 border border-white/35 hover:border-white hover:bg-white/10 text-white font-semibold px-6 py-3 rounded-full transition-all text-sm"
-              >
-                <Phone size={16} />
-                {data.business.phone}
-              </a>
+              
             </div>
           </motion.div>
         </AnimatePresence>
 
         {/* Slide dots */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-2.5">
+        <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-2.5">
           {slides.map((_, i) => (
             <button
               key={i}
